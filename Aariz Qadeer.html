@@ -1,0 +1,170 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Aariz Qadeer</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #e6f2ff;
+      padding: 30px;
+      text-align: center;
+    }
+
+    h1 {
+      font-size: 3rem;
+      margin-bottom: 40px;
+      color: #003366;
+    }
+
+    .subject-block {
+      margin-bottom: 50px;
+    }
+
+    .sub-button {
+      display: block;
+      margin: 10px auto;
+      padding: 12px 20px;
+      background-color: #3399ff;
+      color: white;
+      font-size: 1rem;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+    }
+
+    .sub-button:hover {
+      background-color: #287acc;
+    }
+
+    .sub-sub-button {
+      display: block;
+      margin: 8px auto;
+      padding: 10px 18px;
+      background-color: #66b3ff;
+      color: white;
+      font-size: 0.95rem;
+      border: none;
+      border-radius: 6px;
+      cursor: pointer;
+      transition: background-color 0.2s ease-in-out;
+    }
+
+    .sub-sub-button:hover {
+      background-color: #5599dd;
+    }
+
+    .dropdown {
+      display: none;
+      margin-top: 10px;
+    }
+
+    iframe {
+      margin-top: 30px;
+      width: 80%;
+      height: 600px;
+      border: 2px solid #ccc;
+      border-radius: 8px;
+      display: block;
+      margin-left: auto;
+      margin-right: auto;
+    }
+  </style>
+</head>
+<body>
+  <h1>Aariz Qadeer</h1>
+  <h2>Subjects for IGCSE</h2>
+  <h3> Subjects: English, Additional Math, Computer Science, Math, Physics, and Chemistry</h3>
+  <h3> Codes: 0510, 0606, 0478, 0580, 0625, and 0620 respectively</h3>
+  <p> Click on the buttons below to view the syllabus, workbook, etc. for each subject.</p>
+  <p> Note: After clicking a button, the document will open in the frame below (at the end of this page).</p>
+
+  <!-- 0510 English -->
+  <div class="subject-block">
+    <h2>0510 English</h2>
+    <button class="sub-button" onclick="showDoc('https://drive.google.com/file/d/15G40lvYIfV5Q13EqSdxVH13cpuE8GDAd/preview')">Syllabus</button>
+    <button class="sub-button" onclick="showDoc('https://drive.google.com/file/d/1k4SWYdeLwp_cPCy3YdmSoO5sJxOvBGY1/preview')">Workbook</button>
+    <button class="sub-button" onclick="showDoc('https://drive.google.com/file/d/1CyVbq7WavbreeYDkdTnWPLhudj3nJyoz/preview')">Book</button>
+  </div>
+
+  <!-- 0606 Additional Math -->
+  <div class="subject-block">
+    <h2>0606 Additional Math</h2>
+    <button class="sub-button" onclick="showDoc('https://drive.google.com/file/d/1eTL0pEZFeLr31AHxicYwDRFzHKQ3uql-/preview')">Syllabus</button>
+    <button class="sub-button" onclick="showDoc('https://drive.google.com/file/d/1reOHXlLNQQIH2jbNuNeqr0pWbGEvjz-n/preview')">Workbook</button>
+    <button class="sub-button" onclick="showDoc('https://drive.google.com/file/d/1WeeTVAqGkJ_fjyJtEFbok1y8HBKN3DMm/preview')">Book</button>
+  </div>
+
+  <!-- 0478 Computer Science -->
+  <div class="subject-block">
+    <h2>0478 Computer Science</h2>
+    <button class="sub-button" onclick="showDoc('https://drive.google.com/file/d/1cvn1X6ZPf8cPcJfU3eTUxVc_2Ye8NRX-/preview')">Syllabus</button>
+    <button class="sub-button" onclick="toggleDropdown('cs-workbooks')">Workbook</button>
+    <div id="cs-workbooks" class="dropdown">
+      <button class="sub-sub-button" onclick="showDoc('https://drive.google.com/file/d/1GXDkGUffK8AmQTv8Ao7dXCFFFnTp_chp/preview')">Workbook 1</button>
+      <button class="sub-sub-button" onclick="showDoc('https://drive.google.com/file/d/1LCenhihBNRqVVA17mngLQzy5KZglikeh/preview')">Workbook 2</button>
+    </div>
+    <button class="sub-button" onclick="showDoc('https://drive.google.com/file/d/1O06f8oC_jJrsxk973FDjCVUcC0_uf-vH/preview')">Book</button>
+    <button class="sub-button" onclick="showDoc('https://drive.google.com/file/d/1pxuwpITcOoclM6NthMp7Q32brZIpiTdq/preview')">Study & Revision Guide</button>
+  </div>
+
+  <!-- 0580 Math -->
+  <div class="subject-block">
+    <h2>0580 Math</h2>
+    <button class="sub-button" onclick="showDoc('https://drive.google.com/file/d/144DU6xlHHrEYTDCJc706JWjlfaW0D4uh/preview')">Syllabus</button>
+    <button class="sub-button" onclick="showDoc('https://drive.google.com/file/d/1oaeVOp4X4a24eYR1lNFvosU0ovvD6YMi/preview')">Workbook</button>
+    <button class="sub-button" onclick="toggleDropdown('math-books')">Book</button>
+    <div id="math-books" class="dropdown">
+      <button class="sub-sub-button" onclick="showDoc('https://drive.google.com/file/d/1Ct6m1xFSQugF-FkwHTidOMb9Qoc6rykw/preview')">Book Part 1</button>
+      <button class="sub-sub-button" onclick="showDoc('https://drive.google.com/file/d/1_juUNjAWqC4sAlYIVbZYxCU8e4E2sKEQ/preview')">Book Part 2</button>
+    </div>
+  </div>
+
+  <!-- 0625 Physics -->
+  <div class="subject-block">
+    <h2>0625 Physics</h2>
+    <button class="sub-button" onclick="showDoc('https://drive.google.com/file/d/17_Vn9CviafqTBmpODYf5-Vmm-vzxk7Wg/preview')">Syllabus</button>
+    <button class="sub-button" onclick="toggleDropdown('phy-workbooks')">Workbook</button>
+    <div id="phy-workbooks" class="dropdown">
+      <button class="sub-sub-button" onclick="showDoc('https://drive.google.com/file/d/1zC00KpVPhuk9aZNfzYlnivmAq7UcAr-f/preview')">Workbook</button>
+      <button class="sub-sub-button" onclick="showDoc('https://drive.google.com/file/d/1gEzgffhPz-h1BMdPJUwjr5IEjdKiZ6lX/preview')">Practical Workbook</button>
+    </div>
+    <button class="sub-button" onclick="showDoc('https://drive.google.com/file/d/1Z-u-8cqKOBMtTu42r8UW099wxdsYku2D/preview')">Book</button>
+    <button class="sub-button" onclick="showDoc('https://drive.google.com/file/d/1wtm3faiCQHd2EK5FsrmNiwhHnIEb5Nyj/preview')">Study & Revision Guide</button>
+  </div>
+
+  <!-- 0620 Chemistry -->
+  <div class="subject-block">
+    <h2>0620 Chemistry</h2>
+    <button class="sub-button" onclick="showDoc('https://drive.google.com/file/d/14Op13EBcKY2qxiJvaUDhaXyhtrO-p7pG/preview')">Syllabus</button>
+    <button class="sub-button" onclick="toggleDropdown('chem-workbooks')">Workbook</button>
+    <div id="chem-workbooks" class="dropdown">
+      <button class="sub-sub-button" onclick="showDoc('https://drive.google.com/file/d/1yfJhP03m_4GUl2OMQ0eP9TvJVmcOyfNy/preview')">Workbook</button>
+      <button class="sub-sub-button" onclick="showDoc('https://drive.google.com/file/d/1PYqGbFj2mwSUUkpPkj4YzV8UuMhmoz5_/preview')">Practical Workbook</button>
+    </div>
+    <button class="sub-button" onclick="showDoc('https://drive.google.com/file/d/1A8KMDOewzgHcas1bKp-eLpgSw_8GObCC/preview')">Book</button>
+    <button class="sub-button" onclick="showDoc('https://drive.google.com/file/d/1q6S4zaYpwwcs8gsdAMHOHn_OCYGa8MXY/preview')">Study & Revision Guide</button>
+  </div>
+
+  <!-- PDF Viewer -->
+  <iframe id="pdf-frame" src="" frameborder="0"></iframe>
+
+  <script>
+    function showDoc(url) {
+      document.getElementById("pdf-frame").src = url;
+    }
+
+    function toggleDropdown(id) {
+      const el = document.getElementById(id);
+      el.style.display = el.style.display === "none" ? "block" : "none";
+    }
+  </script>
+  <footer>
+    <p>Created  by Aariz Qadeer</p>
+    <p> FrFr No Cap </p>
+    <p> Took me Two hours (non-stop) to complete this</p>
+  </footer>
+</body>
+</html>
