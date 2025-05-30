@@ -6,6 +6,45 @@
   <title>Aariz Qadeer</title>
 <link rel="icon" type="image/x-icon" href="favicon.ico">
   <style>
+#overlay {
+  position: fixed;
+  top: 0; left: 0;
+  width: 100vw; height: 100vh;
+  background: rgba(0, 0, 0, 0.7);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+}
+
+.overlay-content {
+  position: relative;
+  width: 80%;
+  height: 90%;
+  background: white;
+  border-radius: 10px;
+  box-shadow: 0 0 20px #000;
+  overflow: hidden;
+}
+
+#pdf-frame {
+  width: 100%;
+  height: 100%;
+}
+
+.close-btn {
+  position: absolute;
+  top: 10px; right: 15px;
+  background: #ff4444;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  font-size: 18px;
+  cursor: pointer;
+  z-index: 1000;
+  border-radius: 5px;
+}
+
     body {
       font-family: Arial, sans-serif;
       background-color: #e6f2ff;
@@ -148,19 +187,29 @@
     <button class="sub-button" onclick="showDoc('https://drive.google.com/file/d/1q6S4zaYpwwcs8gsdAMHOHn_OCYGa8MXY/preview')">Study & Revision Guide</button>
   </div>
 
-  <!-- PDF Viewer -->
+<!-- Overlay for PDF preview -->
+<div id="overlay" style="display: none;">
+  <div class="overlay-content">
+    <button onclick="closeOverlay()" class="close-btn">✖</button>
+    <iframe id="pdf-frame" src="" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
+ <!-- PDF Viewer -->
   <iframe id="pdf-frame" src="" frameborder="0"></iframe>
 
-  <script>
-    function showDoc(url) {
-      document.getElementById("pdf-frame").src = url;
-    }
+<script>
+  function showPDF(url) {
+    document.getElementById('pdf-frame').src = url;
+    document.getElementById('overlay').style.display = 'flex';
+  }
 
-    function toggleDropdown(id) {
-      const el = document.getElementById(id);
-      el.style.display = el.style.display === "none" ? "block" : "none";
-    }
-  </script>
+  function closeOverlay() {
+    document.getElementById('overlay').style.display = 'none';
+    document.getElementById('pdf-frame').src = '';
+  }
+</script>
+
   <footer>
     <p>Created  by Aariz Qadeer</p>
     <p> FrFr No Cap </p>
