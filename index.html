@@ -188,14 +188,6 @@
     <button class="sub-button" onclick="showDoc('https://drive.google.com/file/d/1q6S4zaYpwwcs8gsdAMHOHn_OCYGa8MXY/preview')">Study & Revision Guide</button>
   </div>
 
-<!-- Overlay for PDF preview -->
-<div id="overlay" style="display: none;">
-  <div class="overlay-content">
-    <button onclick="closeOverlay()" class="close-btn">✖</button>
-    <iframe id="pdf-frame" src="" frameborder="0" allowfullscreen></iframe>
-  </div>
-</div>
-
  <!-- PDF Viewer -->
   <iframe id="pdf-frame" src="" frameborder="0"></iframe>
 
@@ -217,5 +209,14 @@
     <p> Took me Two hours (non-stop) to complete this</p>
     <p> Shout-Out To Zuhair BootyHair </p>
   </footer>
+
+<!-- Overlay for PDF preview -->
+<div id="overlay" style="display: none;">
+  <div class="overlay-content">
+    <button onclick="closeOverlay()" class="close-btn">✖</button>
+    <iframe id="pdf-frame" src="" frameborder="0" allowfullscreen></iframe>
+  </div>
+</div>
+
 </body>
 </html>
